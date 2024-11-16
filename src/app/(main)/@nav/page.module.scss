@@ -1,0 +1,14 @@
+.nav {
+    border-radius: 20px;
+    background-color: white;
+    transition: flex 0.3s;
+
+    &:only-child.stretch {
+        flex: 1;
+    }
+}
+
+.menus {
+    display: flex;
+    height: 100%;
+}
