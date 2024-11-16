@@ -1,8 +1,8 @@
 "use client";
 
 import { Highlight, themes } from "prism-react-renderer";
-import styles from "./CodePreview.module.scss";
 import ClipboardIcon from "@/icons/Clipboard";
+import styles from "./CodeRenderer.module.scss";
 
 interface Props {
     fileName: string;
