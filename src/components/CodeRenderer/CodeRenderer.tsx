@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Highlight, themes } from "prism-react-renderer";
 import ClipboardIcon from "@/icons/Clipboard";
 import styles from "./CodeRenderer.module.scss";
@@ -11,13 +12,33 @@ interface Props {
 }
 
 const CodeRenderer = ({ fileName, code, language }: Props) => {
+    const [copied, setCopied] = useState<boolean>(false);
+
+    const onCopyCode = async () => {
+        if (!code) return;
+        await navigator.clipboard.writeText(code);
+        setCopied(true);
+    };
+
+    useEffect(() => {
+        if (copied) {
+            setTimeout(() => {
+                setCopied(false);
+            }, 2000);
+        }
+    }, [copied]);
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.header}>
                 <p className={styles.fileName}>{fileName}</p>
-                <button className={styles.copyBtn}>
-                    <ClipboardIcon />
-                </button>
+                {copied ? (
+                    <span className={styles.copyStatus}>copied!</span>
+                ) : (
+                    <button type="button" className={styles.copyBtn} onClick={onCopyCode}>
+                        <ClipboardIcon />
+                    </button>
+                )}
             </div>
             <div className={styles.editor}>
                 <Highlight theme={themes.gruvboxMaterialDark} code={code} language={language}>
