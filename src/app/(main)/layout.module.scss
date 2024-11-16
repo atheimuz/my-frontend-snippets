@@ -1,0 +1,10 @@
+.wrapper {
+    padding: 20px 20px 0;
+}
+
+.content {
+    display: flex;
+    gap: 12px;
+    height: calc(100vh - 20px);
+    padding-bottom: 20px;
+}
