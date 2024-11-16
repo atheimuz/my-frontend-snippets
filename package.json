@@ -13,6 +13,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
         "next": "15.0.3",
         "classnames": "^2.5.1",
+        "prism-react-renderer": "^2.4.0",
         "sass": "^1.80.7"
   },
   "devDependencies": {
