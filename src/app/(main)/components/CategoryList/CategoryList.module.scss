@@ -1,0 +1,41 @@
+.wrapper {
+    padding: 12px 0 20px;
+    overflow-y: auto;
+}
+
+.items {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px 8px 8px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+
+    .active & {
+        font-weight: bold;
+        background-color: #e3edff;
+        color: #2979ff;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        img {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.icon {
+    display: block;
+    width: 32px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}

@@ -1,0 +1,40 @@
+.wrapper {
+    flex: 1;
+    padding: 20px 0 20px;
+    overflow-y: auto;
+}
+
+.items {
+    padding: 0 20px;
+}
+
+.link {
+    display: block;
+    padding: 20px 12px;
+    border-radius: 10px;
+    color: #777777;
+
+    .active & {
+        background-color: #f6f6f6;
+        color: #484848;
+        // background-color: #e3edff;
+        // color: #2979ff;
+    }
+
+    &:hover {
+        color: #484848;
+    }
+}
+
+.title {
+    font-family: Menlo, Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.desc {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
