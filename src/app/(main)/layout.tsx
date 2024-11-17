@@ -9,17 +9,17 @@ export const metadata: Metadata = {
 
 interface Props {
     nav: React.ReactNode;
-    post: React.ReactNode;
+    code: React.ReactNode;
 }
 
-export default function RootLayout({ nav, post }: Props) {
+export default function RootLayout({ nav, code }: Props) {
     return (
         <html lang="en">
             <body>
                 <div className={styles.wrapper}>
                     <div className={styles.content}>
                         {nav}
-                        {post}
+                        {code}
                     </div>
                 </div>
             </body>

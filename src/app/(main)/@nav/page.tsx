@@ -1,17 +1,17 @@
 import cx from "classnames";
 import CategoryList from "@/app/(main)/components/CategoryList";
-import PostList from "@/app/(main)/components/PostList";
+import CodeList from "@/app/(main)/components/CodeList";
 import styles from "./page.module.scss";
 
-const Nav = ({ searchParams }: { searchParams: { category?: string; postCode?: string } }) => {
+const Nav = ({ searchParams }: { searchParams: { category?: string; codeName?: string } }) => {
     const category = searchParams?.category;
-    const postCode = searchParams?.postCode;
+    const codeName = searchParams?.codeName;
 
     return (
         <nav className={cx(styles.nav, { [styles.stretch]: !!category })}>
             <div className={styles.menus}>
-                <CategoryList category={category} postCode={postCode} />
-                <PostList category={category} postCode={postCode} />
+                <CategoryList category={category} codeName={codeName} />
+                <CodeList category={category} codeName={codeName} />
             </div>
         </nav>
     );
