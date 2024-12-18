@@ -3,3 +3,9 @@ export interface ICode {
     title: string;
     desc: string;
 }
+
+export interface ICodeFile {
+    fileName: string;
+    code: string;
+    language: string;
+}

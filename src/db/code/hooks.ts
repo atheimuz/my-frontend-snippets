@@ -1,8 +1,9 @@
+import { ICodeFile } from "@/models/code";
 import useScrollToEnd, { example as useScrollToEndExample } from "@/hooks/useScrollToEnd";
 import useSearchParams, { example as useSearchParamsExample } from "@/hooks/useSearchParams";
 import useCountdown, { example as useCountdownExample } from "@/hooks/useCountdown";
 
-const hookCode: { [key: string]: { fileName: string; code: string; language: string }[] } = {
+const hookCode: { [key: string]: ICodeFile[] } = {
     useScrollToEnd: [
         { fileName: "useScrollToEnd.ts", code: useScrollToEnd, language: "ts" },
         {

@@ -1,3 +1,4 @@
+import { ICodeFile } from "@/models/code";
 import ErrorBoundary, {
     terminal as ErrorBoundaryTerminal,
     example as ErrorBoundaryExample
@@ -7,7 +8,7 @@ import ErrorBoundaryWithReset, {
     example as ErrorBoundaryWithResetExample
 } from "@/errors/ErrorBoundaryWithReset";
 
-const errorCode: { [key: string]: { fileName: string; code: string; language: string }[] } = {
+const errorCode: { [key: string]: ICodeFile[] } = {
     errorBoundary: [
         { fileName: "terminal", code: ErrorBoundaryTerminal, language: "shell" },
         { fileName: "ErrorBoundary.tsx", code: ErrorBoundary, language: "tsx" },
