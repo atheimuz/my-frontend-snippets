@@ -1,4 +1,6 @@
-const hookList: { value: string; title: string; desc: string }[] = [
+import { ICode } from "@/models/code";
+
+const hookList: ICode[] = [
     {
         value: "useScrollToEnd",
         title: "useScrollToEnd",

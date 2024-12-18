@@ -1,4 +1,6 @@
-const styleList: { value: string; title: string; desc: string }[] = [
+import { ICode } from "@/models/code";
+
+const styleList: ICode[] = [
     {
         value: "multiline",
         title: "말줄임",

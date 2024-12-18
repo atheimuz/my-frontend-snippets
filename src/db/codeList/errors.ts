@@ -1,4 +1,6 @@
-const errorList: { value: string; title: string; desc: string }[] = [
+import { ICode } from "@/models/code";
+
+const errorList: ICode[] = [
     {
         value: "errorBoundary",
         title: "ErrorBoundary",

@@ -1,4 +1,6 @@
-const utilList: { value: string; title: string; desc: string }[] = [
+import { ICode } from "@/models/code";
+
+const utilList: ICode[] = [
     {
         value: "numberWithCommas",
         title: "numberWithCommas",

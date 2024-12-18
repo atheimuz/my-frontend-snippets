@@ -1,4 +1,6 @@
-const remoteList: { value: string; title: string; desc: string }[] = [
+import { ICode } from "@/models/code";
+
+const remoteList: ICode[] = [
     {
         value: "axiosOptions",
         title: "axios options",
